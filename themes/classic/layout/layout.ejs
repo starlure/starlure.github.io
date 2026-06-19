@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= page.title ? page.title + ' | ' + config.title : config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= page.title ? page.title + ' | ' + config.title : config.title %>">
+  <meta property="og:url" content="<%= config.url %><%- url_for(page.path) %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="<%= config.author %>">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+<% if (config.meta_generator) { %><meta name="generator" content="Hexo"><% } %></head>
+
+<body style="background-color: #eff0f6">
+  <div id="container">
+    <%- partial('_partial/nav') %>
+    <div id="main">
+      <%- body %>
+    </div>
+    <%- partial('_partial/footer') %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<section class="archive">
+<%
+  let lastYear;
+  page.posts.each(function(post){
+    const year = date(post.date, 'YYYY');
+    if (year !== lastYear) {
+      if (lastYear) { %>      </ul>
+    </section>
+<%    }
+      lastYear = year; %>
+    <section class="archive-category">
+      <h1 class="title"><%= year %></h1>
+      <ul class="menu">
+<%  } %>
+        <li>
+          <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+          <span class="date"><%= date(post.date, 'MMM DD, YYYY') %></span>
+        </li>
+<%  });
+  if (lastYear) { %>      </ul>
+    </section>
+<%  } %>
+</section>

@@ -1,0 +1,7 @@
+<footer id="footer" class="f-cf">
+  <%= theme.email %>
+  <% for (const name in theme.social) { %>
+    · <a href="<%= theme.social[name].url %>" target="_blank" class="nav-icn"><%= name %></a>
+  <% } %>
+  <span class="copyright">All rights reserved @<%= config.author %></span>
+</footer>

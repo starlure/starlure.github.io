@@ -1,0 +1,16 @@
+# Classic theme — reconstructed from the original deployed HTML.
+
+# Slogan shown as the header title (links to home).
+slogan: Stay Hungray, Stay Foolish
+
+# Footer contact email.
+email: starlure@gmail.com
+
+# Social links. Key = footer label; icon = iconfont glyph name (icon-<icon>).
+social:
+  Twitter:
+    url: https://twitter.com/starlure
+    icon: twitter
+  GitHub:
+    url: https://github.com/starlure
+    icon: github

@@ -1,0 +1,12 @@
+<section class="article">
+  <h2 class="title"><%= page.title %></h2>
+  <p class="sub"><%= date(page.date, 'MMM DD, YYYY') %></p>
+  <article class="content">
+    <%- page.content %>
+  </article>
+  <footer class="f-cf">
+    <% if (page.tags && page.tags.length){ %>
+      <% page.tags.each(function(tag){ %><a href="<%- url_for(tag.path) %>" class="nav-icn">#<%= tag.name %></a> <% }) %>
+    <% } %>
+  </footer>
+</section>

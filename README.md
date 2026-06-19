@@ -1,6 +1,7 @@
 # starlure.github.io
 
-Personal blog built with [Hexo](https://hexo.io/) and the [NeXT](https://theme-next.js.org/) theme.
+Personal blog built with [Hexo](https://hexo.io/) and a custom `classic` theme
+(`themes/classic/`, reconstructed from the original deployed HTML).
 
 ## Branch layout
 
@@ -34,4 +35,4 @@ git push origin source
 ## Configuration
 
 - `_config.yml` — site config (title, author, URL, deploy target).
-- `_config.next.yml` — NeXT theme config (menu, social links, scheme).
+- `themes/classic/_config.yml` — theme config (header slogan, social links, email).

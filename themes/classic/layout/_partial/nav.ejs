@@ -1,0 +1,17 @@
+<nav id="nav">
+  <header class="header">
+    <a href="/" class="title"><%= theme.slogan %></a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      <% for (const name in theme.social) { %>
+        <a href="<%= theme.social[name].url %>" target="_blank" class="nav-icn iconfont icon-<%= theme.social[name].icon %>"></a>
+      <% } %>
+    </div>
+    <div class="menu">
+      <a href="/" class="nav-menu <%= is_home() ? 'z-active' : '' %>">HOME</a>
+      <a href="/archives" class="nav-menu <%= is_archive() ? 'z-active' : '' %>">ARCHIVE</a>
+      <a href="/about" class="nav-menu <%= (page.path && page.path.indexOf('about') === 0) ? 'z-active' : '' %>">ABOUT</a>
+    </div>
+  </div>
+</nav>

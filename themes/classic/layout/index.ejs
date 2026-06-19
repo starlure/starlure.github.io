@@ -1,0 +1,9 @@
+<% page.posts.each(function(post){ %>
+<div class="project-card">
+  <div class="ctnWrap">
+    <a href="<%- url_for(post.path) %>" class="title"><%= post.title %></a>
+    <section class="desc"><%- post.excerpt %></section>
+    <p class="sub"><%= date(post.date, 'MMM DD, YYYY') %></p>
+  </div>
+</div>
+<% }) %>
