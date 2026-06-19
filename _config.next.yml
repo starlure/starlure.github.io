@@ -1,0 +1,38 @@
+# NeXT theme configuration
+# Overrides node_modules/hexo-theme-next/_config.yml — safe across theme updates.
+# Docs: https://theme-next.js.org/
+
+# Scheme: Muse | Mist | Pisces | Gemini
+scheme: Gemini
+
+# Top menu. Keys map to languages/_config; values are "path || icon".
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+
+# Sidebar social links
+social:
+  GitHub: https://github.com/starlure || fab fa-github
+  Twitter: https://twitter.com/starlure || fab fa-twitter
+  E-Mail: mailto:starlure@gmail.com || fa fa-envelope
+
+social_icons:
+  enable: true
+
+# Sidebar
+sidebar:
+  position: left
+  display: post
+
+# Show author / site author in footer
+footer:
+  since: 2020
+  icon:
+    name: fa fa-heart
+    animated: false
+
+# Code highlight theme
+codeblock:
+  theme:
+    light: default
